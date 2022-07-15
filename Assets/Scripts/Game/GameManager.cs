@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     Player player2;
     Player currentPlayer;
 
+    private bool choosingCards; //true if cards were just drawn and it is time for player to choose cards
+    private bool choice; //true if time for players to choose to call, fold, bet, or continue
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,7 @@ public class GameManager : MonoBehaviour
         currentPlayer = player1;
     }
 
-    // Update is called once per frame
+    // Runs once each loop
     void Update()
     {
         
