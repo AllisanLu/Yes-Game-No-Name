@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Hand hand;
+    int health;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void DrawCards()
     {
-        
+        //Dice is rolled in GameManager
     }
+
+    public void Call()
+    {
+
+    }
+
+    public void Fold()
+    {
+
+    }
+
 }

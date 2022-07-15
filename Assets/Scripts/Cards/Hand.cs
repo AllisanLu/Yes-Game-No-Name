@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
-    List<Card> hand;
+    private List<Card> hand;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,11 @@ public class Hand : MonoBehaviour
     public void AddCard(Card card)
     {
 
+    }
+
+    public List<Card> RevealHand()
+    {
+        return hand;
     }
 
     public void Clear()

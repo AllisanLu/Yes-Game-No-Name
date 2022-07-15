@@ -2,24 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Deck : MonoBehaviour
+public class Deck: MonoBehaviour
 {
     int level;
     List<Card> cards;
-    // Start is called before the first frame update
-    void Start()
+
+    string[] suits = new string[] { "red", "green", "purple", "blue" };
+    string[] types = new string[] { "attack", "heal", "shield", "bomb" };
+
+    public Deck()
     {
-        //make all the cards in a deck
+        //make 3 cards that are alike for the entire deck
+        for (int i = 0; i < suits.Length; i++)
+        {
+            for (int j = 0; j < types.Length; j++)
+            {
+                for (int k = 0; k < 3; k++)
+                {
+                    Card card = new Card(suits[i], level, types[j]);
+                    cards.Add(card);
+                }
+            }
+        }
+        Shuffle();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Shuffle()
     {
-        
+
     }
-
-    public void shuffle()
+    
+    public Card DrawCard()
     {
-
+        Card card = cards[0];
+        cards.RemoveAt(0);
+        return card;
     }
 }
